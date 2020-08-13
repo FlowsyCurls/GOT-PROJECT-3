@@ -20,7 +20,7 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Cliente" targetName="Cliente" />
+      <config projectName="GOT" targetName="GOT" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -30,11 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a933bd06-6df8-49cc-be5e-a5bbe16dd80d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Cliente" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Cliente" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597346143666</updated>
-      <workItem from="1597346144910" duration="5250000" />
+      <workItem from="1597346144910" duration="6313000" />
     </task>
     <servers />
   </component>
@@ -125,22 +121,22 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="502" y="105" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog/72.27.1294.741@72.27.1294.741" timestamp="1597351464589" />
-    <state width="1252" height="235" key="GridCell.Tab.0.bottom" timestamp="1597351473927">
+    <state width="1252" height="235" key="GridCell.Tab.0.bottom" timestamp="1597351755409">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
-    <state width="1252" height="235" key="GridCell.Tab.0.center" timestamp="1597351473927">
+    <state width="1252" height="235" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1597351755409" />
+    <state width="1252" height="235" key="GridCell.Tab.0.center" timestamp="1597351755406">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
-    <state width="1252" height="235" key="GridCell.Tab.0.left" timestamp="1597351473926">
+    <state width="1252" height="235" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1597351755406" />
+    <state width="1252" height="235" key="GridCell.Tab.0.left" timestamp="1597351755404">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1597351473926" />
-    <state width="1252" height="235" key="GridCell.Tab.0.right" timestamp="1597351473927">
+    <state width="1252" height="235" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1597351755404" />
+    <state width="1252" height="235" key="GridCell.Tab.0.right" timestamp="1597351755408">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
+    <state width="1252" height="235" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1597351755408" />
     <state x="230" y="31" width="977" height="737" key="SettingsEditor" timestamp="1597349363773">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
