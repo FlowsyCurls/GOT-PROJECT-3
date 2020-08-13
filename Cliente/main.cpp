@@ -2,11 +2,14 @@
 #include "restclient-cpp/restclient.h"
 using namespace std;
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+int main(int argc, char *argv[]) {
 
-    RestClient::Response r = RestClient::get("http://www.google.com");
-    cout << r.body;
+    for(int i = 0; i < argc; i++){
+        printf("argumento %d, %s\n", i, argv[i]);
+    }
+
+    //RestClient::Response r = RestClient::get("http://www.google.com");
+    //cout << r.body;
 
 
     return 0;

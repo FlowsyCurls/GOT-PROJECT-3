@@ -1,0 +1,3 @@
+/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/rebuild_cache.dir
+/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/edit_cache.dir
+/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/GOT.dir

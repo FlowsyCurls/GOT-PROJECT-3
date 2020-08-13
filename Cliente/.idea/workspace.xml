@@ -30,10 +30,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a933bd06-6df8-49cc-be5e-a5bbe16dd80d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Cliente.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Cliente" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Cliente" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +49,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1g3bIXRUwUgGnAXtYeAUjlgZw87" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
@@ -63,10 +67,11 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RunManager">
-    <configuration name="Cliente" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cliente" TARGET_NAME="Cliente" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Cliente" RUN_TARGET_NAME="Cliente">
+    <configuration name="GOT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GOT" TARGET_NAME="GOT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GOT" RUN_TARGET_NAME="GOT">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -90,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597346143666</updated>
-      <workItem from="1597346144910" duration="1868000" />
+      <workItem from="1597346144910" duration="5250000" />
     </task>
     <servers />
   </component>
@@ -108,10 +113,37 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="230" y="31" width="977" height="737" key="SettingsEditor" timestamp="1597347260922">
+    <state x="152" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597351565168">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="230" y="31" width="977" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1597347260922" />
+    <state x="152" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1597351565168" />
+    <state x="502" y="105" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1597351464589">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="502" y="105" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog/72.27.1294.741@72.27.1294.741" timestamp="1597351464589" />
+    <state width="1252" height="235" key="GridCell.Tab.0.bottom" timestamp="1597351473927">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1252" height="235" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
+    <state width="1252" height="235" key="GridCell.Tab.0.center" timestamp="1597351473927">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1252" height="235" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
+    <state width="1252" height="235" key="GridCell.Tab.0.left" timestamp="1597351473926">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1252" height="235" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1597351473926" />
+    <state width="1252" height="235" key="GridCell.Tab.0.right" timestamp="1597351473927">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1252" height="235" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
+    <state x="230" y="31" width="977" height="737" key="SettingsEditor" timestamp="1597349363773">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="230" y="31" width="977" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1597349363773" />
   </component>
 </project>
