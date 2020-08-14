@@ -20,9 +20,10 @@ public class CommitController {
 	
 	@GetMapping("/Commits")
 	public List<Commit> getAllCommits(){
+		
 		return commitService.getAll();
 	}
-	/*
+	
 	@GetMapping("/Commit/{id}")
 	public Commit getOneCommit(@PathVariable(value = "id") long id) {
 		return commitService.get(id);
@@ -34,8 +35,8 @@ public class CommitController {
 	}
 	
 	@PutMapping("/Commit")
-	public void updateCommit(Commit commit, long id) {
-		commitService.put(commit, id);
+	public void updateCommit(Commit commit, long id, int idRepository, String date) {
+		commitService.put(commit, id, date, idRepository);
 	}
-	*/
+	
 }
