@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = -DCURL_STATICLIB
 
-CXX_INCLUDES = -isystem /home/heutlett/vcpkg/installed/x64-linux/include 
+CXX_INCLUDES = -isystem /home/julian_camacho/vcpkg/installed/x64-linux/include 
 

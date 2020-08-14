@@ -1,4 +1,4 @@
-# Install script for directory: /home/heutlett/GOT-PROJECT-3/Cliente
+# Install script for directory: /home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/heutlett/GOT-PROJECT-3/Cliente/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

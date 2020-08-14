@@ -68,10 +68,10 @@ RM = /snap/clion/123/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
+CMAKE_SOURCE_DIR = "/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
+CMAKE_BINARY_DIR = "/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/CMakeFiles" "/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -170,6 +170,87 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/FileNode.o: src/FileNode.cpp.o
+
+.PHONY : src/FileNode.o
+
+# target to build an object file
+src/FileNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/FileNode.cpp.o
+.PHONY : src/FileNode.cpp.o
+
+src/FileNode.i: src/FileNode.cpp.i
+
+.PHONY : src/FileNode.i
+
+# target to preprocess a source file
+src/FileNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/FileNode.cpp.i
+.PHONY : src/FileNode.cpp.i
+
+src/FileNode.s: src/FileNode.cpp.s
+
+.PHONY : src/FileNode.s
+
+# target to generate assembly for a file
+src/FileNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/FileNode.cpp.s
+.PHONY : src/FileNode.cpp.s
+
+src/Repository.o: src/Repository.cpp.o
+
+.PHONY : src/Repository.o
+
+# target to build an object file
+src/Repository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/Repository.cpp.o
+.PHONY : src/Repository.cpp.o
+
+src/Repository.i: src/Repository.cpp.i
+
+.PHONY : src/Repository.i
+
+# target to preprocess a source file
+src/Repository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/Repository.cpp.i
+.PHONY : src/Repository.cpp.i
+
+src/Repository.s: src/Repository.cpp.s
+
+.PHONY : src/Repository.s
+
+# target to generate assembly for a file
+src/Repository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/Repository.cpp.s
+.PHONY : src/Repository.cpp.s
+
+src/RepositoryList.o: src/RepositoryList.cpp.o
+
+.PHONY : src/RepositoryList.o
+
+# target to build an object file
+src/RepositoryList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/RepositoryList.cpp.o
+.PHONY : src/RepositoryList.cpp.o
+
+src/RepositoryList.i: src/RepositoryList.cpp.i
+
+.PHONY : src/RepositoryList.i
+
+# target to preprocess a source file
+src/RepositoryList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/RepositoryList.cpp.i
+.PHONY : src/RepositoryList.cpp.i
+
+src/RepositoryList.s: src/RepositoryList.cpp.s
+
+.PHONY : src/RepositoryList.s
+
+# target to generate assembly for a file
+src/RepositoryList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/src/RepositoryList.cpp.s
+.PHONY : src/RepositoryList.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +263,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/FileNode.o"
+	@echo "... src/FileNode.i"
+	@echo "... src/FileNode.s"
+	@echo "... src/Repository.o"
+	@echo "... src/Repository.i"
+	@echo "... src/Repository.s"
+	@echo "... src/RepositoryList.o"
+	@echo "... src/RepositoryList.i"
+	@echo "... src/RepositoryList.s"
 .PHONY : help
 
 
