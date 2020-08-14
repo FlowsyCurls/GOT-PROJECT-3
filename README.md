@@ -42,6 +42,6 @@ Open folder Rest-Api in VSCode.
 Run in terminal:
 *Dependencies:*  
 + nmp install express mysql
-+ npm install nodemon -D
-*Execute*  
++ npm install nodemon -D  
+*Execute:*  
 + npm run dev
