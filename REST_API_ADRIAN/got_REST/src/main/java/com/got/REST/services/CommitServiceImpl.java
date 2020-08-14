@@ -13,17 +13,17 @@ public class CommitServiceImpl implements ICommitService{
 
 	@Autowired
 	private ICommitDao commitDao;
-	
+	/*
 	@Override
 	public Commit get(long id) {
 		return commitDao.findById(id).get();
-	}
+	}*/
 
 	@Override
 	public List<Commit> getAll() {
 		return (List<Commit>) commitDao.findAll();
 	}
-
+/*
 	@Override
 	public void post(Commit commit) {
 		commitDao.save(commit);
@@ -33,7 +33,7 @@ public class CommitServiceImpl implements ICommitService{
 	public void put(Commit commit, long id) {
 		commitDao.findById(id).ifPresent((x)->{
 			
-			commit.setId(id);
+			commit.setIdCommit(id);
 			commitDao.save(commit);
 			
 		});
@@ -44,5 +44,5 @@ public class CommitServiceImpl implements ICommitService{
 	public void delete(long id) {
 		commitDao.deleteById(id);
 	}
-
+*/
 }

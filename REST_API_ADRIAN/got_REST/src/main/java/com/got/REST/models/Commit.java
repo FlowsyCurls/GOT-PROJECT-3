@@ -16,18 +16,18 @@ public class Commit implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long idCommit;
 	
 	private String date;
 	
 	private int idRepository;
 
-	public long getId() {
-		return id;
+	public long getIdCommit() {
+		return idCommit;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setIdCommit(long id) {
+		this.idCommit = id;
 	}
 
 	public String getDate() {

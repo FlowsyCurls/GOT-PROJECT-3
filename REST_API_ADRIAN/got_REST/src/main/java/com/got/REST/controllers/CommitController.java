@@ -22,7 +22,7 @@ public class CommitController {
 	public List<Commit> getAllCommits(){
 		return commitService.getAll();
 	}
-	
+	/*
 	@GetMapping("/Commit/{id}")
 	public Commit getOneCommit(@PathVariable(value = "id") long id) {
 		return commitService.get(id);
@@ -37,5 +37,5 @@ public class CommitController {
 	public void updateCommit(Commit commit, long id) {
 		commitService.put(commit, id);
 	}
-	
+	*/
 }
