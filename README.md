@@ -25,7 +25,7 @@ Rest Api
 
 ### MySql Server
 From the following link: https://linuxhint.com/install_mysql_ubuntu_20-04/
-> _How to install MySQL Server DBMS on Ubuntu:_
+> Scroll to _How to install MySQL Server DBMS on Ubuntu:_
 > + Step 1
 > + Step 2
 > + Step 3  *( Validate: NO, Password: root )*
