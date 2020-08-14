@@ -37,8 +37,6 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-thymeleaf</artifactId>
 </dependency>
-<<<<<<< HEAD
-
 <dependency>
 	<groupId>com.sun.jersey</groupId>
 	<artifactId>jersey-core</artifactId>
@@ -55,9 +53,6 @@
 	<version>1.19</version>
 </dependency>
 
-
-=======
->>>>>>> 74fdf9dc95b77c4c0742f4fc6150e872a9e622ca
 	</dependencies>
 
 	<build>
