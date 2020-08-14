@@ -48,3 +48,7 @@ Run in terminal:
 
 *Execute:*  
 + npm run dev
+
+
+Command to kill port service:
++ sudo kill $(sudo lsof -t -i:3000)
