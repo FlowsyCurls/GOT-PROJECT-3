@@ -32,7 +32,9 @@ From the following link: https://linuxhint.com/install_mysql_ubuntu_20-04/
 > See step 4 in https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/#1-confirm-mysql-version  _*Note:*_ If it does not work, start from step 1 of this page.
 
 ### MySql Workbench
-sudo /etc/init.d/mysql start
++ sudo /etc/init.d/mysql start  
++ ss -ltn
++ sudo ufw allow from any to any port 3306 proto tcp  
 Search for mysql workbench in snap store.  
 https://i.imgur.com/zVZYpbH.png  
 Password:: root
@@ -46,7 +48,3 @@ Run in terminal:
 
 *Execute:*  
 + npm run dev
-
-
-Note: Active ports command:  
-+ ss -ltn
