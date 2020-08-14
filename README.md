@@ -35,9 +35,14 @@ From the following link: https://linuxhint.com/install_mysql_ubuntu_20-04/
 > See step 4 in https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/#1-confirm-mysql-version  _*Note:*_ If it does not work, start from step 1 of this page.
 
 ### MySql Workbench
-Search for mysql workbench in snap store.
-https://i.imgur.com/zVZYpbH.png
+sudo /etc/init.d/mysql start
+Search for mysql workbench in snap store.  
+https://i.imgur.com/zVZYpbH.png  
 Password:: root
 
 
-### _Execute_
+### _Execute_ 
+Open folder Rest-Api in VSCode.  
+Run in terminal: npm run dev.
+
+
