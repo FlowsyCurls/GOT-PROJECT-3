@@ -39,7 +39,7 @@ Password:: root
 
 ### VSCode Dependencies
 Open folder Rest-Api in VSCode.  
-Run in terminal:
+Run in terminal:  
 *Dependencies:*  
 + nmp install express mysql
 + npm install nodemon -D  
