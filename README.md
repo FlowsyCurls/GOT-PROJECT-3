@@ -22,9 +22,6 @@ Obviusly you need to change "/user/" for your username in ubuntu.
 
 Rest Api
 -----
-### VSCode Dependencies
-+ nmp install express mysql
-+ npm install nodemon -D
 
 ### MySql Server
 From the following link: https://linuxhint.com/install_mysql_ubuntu_20-04/
@@ -40,9 +37,11 @@ Search for mysql workbench in snap store.
 https://i.imgur.com/zVZYpbH.png  
 Password:: root
 
-
-### _Execute_ 
+### VSCode Dependencies
 Open folder Rest-Api in VSCode.  
-Run in terminal: npm run dev.
-
-
+Run in terminal:
+*Dependencies:*  
++ nmp install express mysql
++ npm install nodemon -D
+*Execute*  
++ npm run dev
