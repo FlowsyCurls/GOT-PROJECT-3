@@ -46,3 +46,7 @@ Run in terminal:
 
 *Execute:*  
 + npm run dev
+
+
+Note: Active ports command:  
++ ss -ltn
