@@ -24,6 +24,8 @@
 -- Found Threads: TRUE  
 -- Found OpenSSL: /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libcrypto.a (found suitable version "1.1.1g", minimum required is "1")  
 -- Found ZLIB: /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libz.a (found suitable version "1.2.11", minimum required is "1") 
+/opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=/home/jeykime/vcpkg/scripts/buildsystems/vcpkg.cmake -G "CodeBlocks - Unix Makefiles" /home/jeykime/Documents/GOT-PROJECT-3/Cliente
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/heutlett/GOT-PROJECT-3/Cliente
+-- Build files have been written to: /home/jeykime/Documents/GOT-PROJECT-3/Cliente/cmake-build-debug
