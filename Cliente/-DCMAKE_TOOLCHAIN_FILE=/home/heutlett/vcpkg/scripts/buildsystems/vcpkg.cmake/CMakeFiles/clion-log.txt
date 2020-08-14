@@ -1,0 +1,16 @@
+/snap/clion/123/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/heutlett/GOT-PROJECT-3/Cliente
+CMake Error at CMakeLists.txt:6 (find_package):
+  Could not find a package configuration file provided by "restclient-cpp"
+  with any of the following names:
+
+    restclient-cppConfig.cmake
+    restclient-cpp-config.cmake
+
+  Add the installation prefix of "restclient-cpp" to CMAKE_PREFIX_PATH or set
+  "restclient-cpp_DIR" to a directory containing one of the above files.  If
+  "restclient-cpp" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeOutput.log".

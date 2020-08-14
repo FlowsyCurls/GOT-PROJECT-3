@@ -8,8 +8,8 @@ int main(int argc, char *argv[]) {
         printf("argumento %d, %s\n", i, argv[i]);
     }
 
-    //RestClient::Response r = RestClient::get("http://www.google.com");
-    //cout << r.body;
+    RestClient::Response r = RestClient::get("http://localhost:8080/user_manager");
+    cout << r.body;
 
 
     return 0;
