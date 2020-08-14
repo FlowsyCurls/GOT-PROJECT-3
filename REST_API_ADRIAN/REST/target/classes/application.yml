@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/qr_code
+    url: jdbc:mysql://localhost:3306/qr_code
     username: root
     password: root
   

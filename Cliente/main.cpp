@@ -9,8 +9,10 @@ int main(int argc, char *argv[]) {
     }
 
     RestClient::Response r = RestClient::get("http://localhost:8080/user_manager");
-    cout << r.body;
+    cout << r.body << endl;
 
+    RestClient::Response r1 = RestClient::get("http://localhost:8080/hola");
+    cout << r1.body;
 
     return 0;
 
