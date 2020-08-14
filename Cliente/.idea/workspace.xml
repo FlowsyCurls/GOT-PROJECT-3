@@ -20,21 +20,33 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Cliente" targetName="Cliente" />
+      <config projectName="GOT" targetName="GOT" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/heutlett/vcpkg/scripts/buildsystems/vcpkg.cmake" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/jeykime/vcpkg/scripts/buildsystems/vcpkg.cmake" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a933bd06-6df8-49cc-be5e-a5bbe16dd80d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Cliente" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Cliente" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GOT.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/GOT.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest-Api/node_modules/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Rest-Api/node_modules/express/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest-Api/node_modules/mysql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Rest-Api/node_modules/mysql/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest-Api/node_modules/nodemon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Rest-Api/node_modules/nodemon/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +71,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,18 +90,15 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+<<<<<<< HEAD
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+=======
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+>>>>>>> b413f87517cbbd576d3c7c813470c8b67e87fb6b
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a933bd06-6df8-49cc-be5e-a5bbe16dd80d" name="Default Changelist" comment="" />
@@ -95,12 +106,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597346143666</updated>
-      <workItem from="1597346144910" duration="5250000" />
+      <workItem from="1597346144910" duration="7073000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -112,6 +123,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -121,29 +133,33 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="152" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1597351565168" />
+    <state x="485" y="204" width="458" height="401" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597360305128">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="485" y="204" width="458" height="401" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1294.741@72.27.1294.741" timestamp="1597360305128" />
     <state x="502" y="105" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1597351464589">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="502" y="105" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog/72.27.1294.741@72.27.1294.741" timestamp="1597351464589" />
-    <state width="1252" height="235" key="GridCell.Tab.0.bottom" timestamp="1597351473927">
+    <state width="1252" height="235" key="GridCell.Tab.0.bottom" timestamp="1597360272261">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
-    <state width="1252" height="235" key="GridCell.Tab.0.center" timestamp="1597351473927">
+    <state width="1252" height="235" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1597360272261" />
+    <state width="1252" height="235" key="GridCell.Tab.0.center" timestamp="1597360272261">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
-    <state width="1252" height="235" key="GridCell.Tab.0.left" timestamp="1597351473926">
+    <state width="1252" height="235" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1597360272261" />
+    <state width="1252" height="235" key="GridCell.Tab.0.left" timestamp="1597360272261">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1597351473926" />
-    <state width="1252" height="235" key="GridCell.Tab.0.right" timestamp="1597351473927">
+    <state width="1252" height="235" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1597360272261" />
+    <state width="1252" height="235" key="GridCell.Tab.0.right" timestamp="1597360272261">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1252" height="235" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1597351473927" />
-    <state x="230" y="31" width="977" height="737" key="SettingsEditor" timestamp="1597349363773">
+    <state width="1252" height="235" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1597360272261" />
+    <state x="230" y="31" width="977" height="737" key="SettingsEditor" timestamp="1597360267922">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="230" y="31" width="977" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1597349363773" />
+    <state x="230" y="31" width="977" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1597360267922" />
   </component>
 </project>
