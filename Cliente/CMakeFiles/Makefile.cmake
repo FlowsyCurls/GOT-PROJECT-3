@@ -40,7 +40,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineCompilerABI.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineCompilerId.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineSystem.cmake"
+  "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindBinUtils.cmake"
+  "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindDependencyMacro.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
@@ -53,6 +55,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeTestCCompiler.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeTestCXXCompiler.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeTestCompilerCommon.cmake"
+  "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeUnixFindMake.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.c.in"
@@ -120,6 +123,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
+  "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
   "/snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/SelectLibraryConfigurations.cmake"
   )
 
