@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
   const query = `
   SET @id = ?;
   SET @name = ?;
-  CALL employeeAddOrEdit(@id, @name);
+  CALL repositoryAddOrEdit(@id, @name);
 `;  mysqlConnection.query(query, [id, name], (err, rows, fields) => {
     if(!err) {
       res.json({status: 'Repository Saved'});
@@ -54,7 +54,7 @@ router.put('/:id', (req, res) => {
   const query = `
   SET @id = ?;
   SET @name = ?;
-  CALL employeeAddOrEdit(@id, @name);
+  CALL repositoryAddOrEdit(@id, @name);
 `;
   mysqlConnection.query(query, [id, name], (err, rows, fields) => {
     if(!err) {
