@@ -43,5 +43,6 @@ Run in terminal:
 *Dependencies:*  
 + nmp install express mysql
 + npm install nodemon -D    
+
 *Execute:*  
 + npm run dev
