@@ -18,9 +18,22 @@ public class Commit implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCommit;
 	
+	private String message;
+	
 	private String date;
 	
 	private int idRepository;
+	
+	
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
 
 	public long getIdCommit() {
 		return idCommit;
@@ -46,10 +59,11 @@ public class Commit implements Serializable{
 		this.idRepository = idRepository;
 	}
 
-	public Commit(String date, int idRepository) {
+	public Commit(String date, String message, int idRepository) {
 		super();
 		this.date = date;
 		this.idRepository = idRepository;
+		this.message = message;
 	}
 
 	public Commit() {
