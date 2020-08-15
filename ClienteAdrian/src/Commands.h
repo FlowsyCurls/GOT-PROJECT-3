@@ -70,11 +70,34 @@ void createJsonCommitRegister(json j){
 }
 
 void resetContent(string content, string path){
+/*
+    ifstream archivo(path);
+
+    if(archivo.fail()){
+        cerr << "Error al abrir el archivo " + path << endl;
+        return;
+    }else{
+
+        ofstream archivo;  // objeto de la clase ofstream
+
+        archivo.open(path);
+
+        archivo << path;
+
+        archivo.close();
+
+    }
+
+
+
+*/
+
 
     ofstream outDir;
     outDir.open (path);
     outDir << content;
     outDir.close();
+
 
 }
 
