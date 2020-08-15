@@ -1,6 +1,28 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp
+<<<<<<< HEAD
+Change Dir: /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_913c1/fast && /usr/bin/make  -f CMakeFiles/cmTC_913c1.dir/build.make CMakeFiles/cmTC_913c1.dir/build
+make[1]: Entering directory '/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_913c1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_913c1.dir/src.c.o   -c /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_913c1
+/snap/clion/123/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_913c1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_913c1.dir/src.c.o  -o cmTC_913c1 
+/usr/bin/ld: CMakeFiles/cmTC_913c1.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_913c1.dir/build.make:107: cmTC_913c1] Error 1
+make[1]: Leaving directory '/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_913c1/fast] Error 2
+=======
 Change Dir: /home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command(s):/usr/bin/make cmTC_8fb36/fast && /usr/bin/make  -f CMakeFiles/cmTC_8fb36.dir/build.make CMakeFiles/cmTC_8fb36.dir/build
 make[1]: se entra en el directorio '/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_8fb36.dir/src.c.o
@@ -20,6 +42,29 @@ make[1]: *** [cmTC_8fb36] Error 1
 make[1]: se sale del directorio '/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
 Makefile:141: fallo en las instrucciones para el objetivo 'cmTC_8fb36/fast'
 make: *** [cmTC_8fb36/fast] Error 2
+=======
+Run Build Command(s):/usr/bin/make cmTC_16e7c/fast && /usr/bin/make -f CMakeFiles/cmTC_16e7c.dir/build.make CMakeFiles/cmTC_16e7c.dir/build
+make[1]: Entering directory '/home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16e7c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_16e7c.dir/src.c.o   -c /home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_16e7c
+/opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16e7c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_16e7c.dir/src.c.o  -o cmTC_16e7c 
+/usr/bin/ld: CMakeFiles/cmTC_16e7c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_16e7c.dir/build.make:87: cmTC_16e7c] Error 1
+make[1]: Leaving directory '/home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_16e7c/fast] Error 2
+CMakeFiles/cmTC_4b6df.dir/build.make:106: fallo en las instrucciones para el objetivo 'cmTC_4b6df'
+make[1]: *** [cmTC_4b6df] Error 1
+make[1]: se sale del directorio '/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+Makefile:141: fallo en las instrucciones para el objetivo 'cmTC_4b6df/fast'
+make: *** [cmTC_4b6df/fast] Error 2
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
+>>>>>>> master
 
 
 Source file was:
@@ -35,7 +80,6 @@ int main(void)
   pthread_t thread;
   pthread_create(&thread, NULL, test_func, NULL);
   pthread_detach(thread);
-  pthread_cancel(thread);
   pthread_join(thread, NULL);
   pthread_atfork(NULL, NULL, NULL);
   pthread_exit(NULL);
@@ -44,8 +88,26 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp
+<<<<<<< HEAD
+Change Dir: /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_08522/fast && /usr/bin/make  -f CMakeFiles/cmTC_08522.dir/build.make CMakeFiles/cmTC_08522.dir/build
+make[1]: Entering directory '/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08522.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_08522.dir/CheckFunctionExists.c.o   -c /snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_08522
+/snap/clion/123/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08522.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_08522.dir/CheckFunctionExists.c.o  -o cmTC_08522  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_08522.dir/build.make:107: cmTC_08522] Error 1
+make[1]: Leaving directory '/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_08522/fast] Error 2
+=======
 Change Dir: /home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command(s):/usr/bin/make cmTC_4cfab/fast && /usr/bin/make  -f CMakeFiles/cmTC_4cfab.dir/build.make CMakeFiles/cmTC_4cfab.dir/build
 make[1]: se entra en el directorio '/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_4cfab.dir/CheckFunctionExists.c.o
@@ -60,6 +122,26 @@ make[1]: *** [cmTC_4cfab] Error 1
 make[1]: se sale del directorio '/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
 Makefile:141: fallo en las instrucciones para el objetivo 'cmTC_4cfab/fast'
 make: *** [cmTC_4cfab/fast] Error 2
+=======
+Run Build Command(s):/usr/bin/make cmTC_7b4b8/fast && /usr/bin/make -f CMakeFiles/cmTC_7b4b8.dir/build.make CMakeFiles/cmTC_7b4b8.dir/build
+make[1]: Entering directory '/home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7b4b8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7b4b8.dir/CheckFunctionExists.c.o   -c /opt/clion-2020.1.2/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7b4b8
+/opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b4b8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_7b4b8.dir/CheckFunctionExists.c.o  -o cmTC_7b4b8  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7b4b8.dir/build.make:87: cmTC_7b4b8] Error 1
+make[1]: Leaving directory '/home/jeykime/Documents/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7b4b8/fast] Error 2
+CMakeFiles/cmTC_17ecd.dir/build.make:106: fallo en las instrucciones para el objetivo 'cmTC_17ecd'
+make[1]: *** [cmTC_17ecd] Error 1
+make[1]: se sale del directorio '/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/CMakeTmp'
+Makefile:141: fallo en las instrucciones para el objetivo 'cmTC_17ecd/fast'
+make: *** [cmTC_17ecd/fast] Error 2
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
+>>>>>>> master
 
 
 

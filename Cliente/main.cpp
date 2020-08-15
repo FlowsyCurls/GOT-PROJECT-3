@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
             //repoList[argv[3]] = repo->getFiles();
 
 
+<<<<<<< HEAD
         } else /*if(repoList[argv[3]] != NULL)*/{
             Repository* repo = new Repository(argv[3]);
 
@@ -63,6 +64,15 @@ int main(int argc, char *argv[]) {
 
                 fileNodeList.push_back(nodeFile);
 
+=======
+        } else if(repoList[argv[3]] != NULL){
+            Repository* repo = new Repository(argv[3]);
+
+            //Si el directorio a actualizar en el repo especificado existe
+            if(repoList[argv[3]][s] !=  NULL){
+
+            }
+>>>>>>> master
 
         }
     }
