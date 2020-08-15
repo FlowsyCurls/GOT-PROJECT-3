@@ -1,0 +1,11 @@
+/snap/clion/123/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=/home/heutlett/vcpkg/scripts/buildsystems -G "CodeBlocks - Unix Makefiles" /home/heutlett/GOT-PROJECT-3/Cliente
+CMake Error at /snap/clion/123/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineSystem.cmake:99 (message):
+  Could not find toolchain file: /home/heutlett/vcpkg/scripts/buildsystems
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
