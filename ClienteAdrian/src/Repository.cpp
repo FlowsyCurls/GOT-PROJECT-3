@@ -2,7 +2,9 @@
 #include <restclient-cpp/restclient.h>
 #include "Repository.h"
 
-
+/**
+ * Crea el directorio de del repositorio creado
+ */
 void Repository::createDir() {
     int status = mkdir(this->name.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     if (status == -1)
@@ -11,6 +13,9 @@ void Repository::createDir() {
         cout << "Directories are created" << endl;
 }
 
+/**
+ * Crea el archivo gotignore
+ */
 void Repository::createGotIgnoreFile(){
     // Create and open a text file
     ofstream gotIgnore(this->name + "/.gotignore");
@@ -18,6 +23,10 @@ void Repository::createGotIgnoreFile(){
     gotIgnore.close();
 }
 
+/**
+ * Lee el contenido del gotignore
+ * @return
+ */
 vector<string> Repository::readGotIgnoreFile(){
     // read and open a text file
     ifstream gotIgnore(this->name + "/.gotignore");
@@ -33,6 +42,10 @@ vector<string> Repository::readGotIgnoreFile(){
     return toIgnoreFiles;
 }
 
+/**
+ * Obtiene los archivos de un directorio
+ * @return
+ */
 vector<FileNode*> Repository::getDirFiles() {
     struct dirent *entry;
     DIR *dir = opendir(this->name.c_str());
@@ -50,6 +63,10 @@ vector<FileNode*> Repository::getDirFiles() {
     return listDir;
 }
 
+/**
+ * Genera un json con los archivos de un directorio
+ * @return
+ */
 json Repository::generateListFilesJson(){
 
     json j;
@@ -72,6 +89,12 @@ json Repository::generateListFilesJson(){
     return j;
 }
 
+/**
+ * Revisa si un archivo está en el gotignore, por lo que debe ser ignorado
+ * @param file
+ * @param ignoredFiles
+ * @return
+ */
 bool Repository::isFileIgnored(string file, vector<string> ignoredFiles){
     bool isIgnored = false;
     for (auto & ignoredFile : ignoredFiles) {
@@ -83,18 +106,32 @@ bool Repository::isFileIgnored(string file, vector<string> ignoredFiles){
     return isIgnored;
 }
 
+/**
+ * Añade un archivo al json de repositorios
+ * @param repoList
+ * @return
+ */
 json Repository::addToJson(json repoList){
     repoList[this->getName()] = {};
     return repoList;
 }
 
-
+/**
+ * Ejecuta lo necesario para inicializar un repositorio
+ * @param repoList
+ * @return
+ */
 json Repository::initCommand(json repoList) {
     this->createDir();
     this->createGotIgnoreFile();
     return this->addToJson(repoList);
 }
 
+/**
+ * Ejecuta lo necesario para añadir los archivos en la carpeta del repositorio
+ * @param repoList
+ * @return
+ */
 void Repository::addCommand() {
     vector<string> toIgnoreFiles = readGotIgnoreFile();
     vector<FileNode*> toAdd;
@@ -109,6 +146,11 @@ void Repository::addCommand() {
     setFiles(toAdd);
 }
 
+/**
+ * Ejecuta lo necesario para añadir un solo archivo de la carpeta del repositorio
+ * @param repoList
+ * @return
+ */
 json Repository::addCommandSingleFile(string file){
     vector<string> toIgnoreFiles = readGotIgnoreFile();
 
@@ -125,6 +167,11 @@ json Repository::addCommandSingleFile(string file){
     }
 }
 
+/**
+ * Ejecuta lo necesario para hacer un commit al server
+ * @param repoList
+ * @return
+ */
 json Repository::createCommit(string name, string message, json listFileNodes){
     json commit;
     commit["repositoryName"] = name;
@@ -135,6 +182,11 @@ json Repository::createCommit(string name, string message, json listFileNodes){
 
 }
 
+/**
+ * Ejecuta lo necesario para hacer un rollback
+ * @param repoList
+ * @return
+ */
 string Repository::rollbackCommand(json rollbackInfo){
 
     RestClient::Response r = RestClient::post("http://localhost:8080/rollback", "application/json", rollbackInfo.dump());

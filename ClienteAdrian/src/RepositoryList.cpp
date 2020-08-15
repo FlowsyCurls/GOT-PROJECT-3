@@ -7,7 +7,10 @@
 #include "json.hpp"
 
 
-
+/**
+ * Añade un repositorio
+ * @param repo
+ */
 void RepositoryList::addRepository(Repository* repo) {
     this->repositories.push_back(repo);
 }

@@ -19,12 +19,21 @@
 
 using namespace std;
 
+
+/**
+ * Imprime una lista
+ * @param list
+ */
 void printList(vector<FileNode> list){
     for (auto & i : list) {
         cout << i.getName() << endl;
     }
 }
 
+/**
+ * Actualiza los repositorios locales
+ * @return json actualizado
+ */
 json getRepositoriesFromJson2() {
     string path = "./config/config.json";
     // read a JSON file
@@ -35,6 +44,10 @@ json getRepositoriesFromJson2() {
     return j;
 }
 
+/**
+ * Actualiza el json de los commits
+ * @return json
+ */
 json getCommitRegisterFromJson() {
     string path = "./config/commitRegister.json";
     // read a JSON file
@@ -45,6 +58,11 @@ json getCommitRegisterFromJson() {
     return j;
 }
 
+/**
+ * Comunicación con el server para los commits
+ * @param commitStructure
+ * @return
+ */
 //Hace el commit a la base de datos, la base de datos devuelve un id para identificar cada commit
 string commitToServer(json commitStructure){
 
@@ -53,6 +71,10 @@ string commitToServer(json commitStructure){
     return r.body;
 }
 
+/**
+ * Crea el json de los repositorios locales
+ * @param j
+ */
 void createJsonFile2(json j){
     ofstream file;
     cout << "Crea json" << endl;
@@ -61,6 +83,10 @@ void createJsonFile2(json j){
     file.close();
 }
 
+/**
+ * Crea el json de los commits
+ * @param j
+ */
 void createJsonCommitRegister(json j){
     ofstream file;
     cout << "Crea json" << endl;
@@ -69,6 +95,11 @@ void createJsonCommitRegister(json j){
     file.close();
 }
 
+/**
+ * Ejecuta el comando reset
+ * @param content
+ * @param path
+ */
 void resetContent(string content, string path){
 /*
     ifstream archivo(path);
@@ -101,6 +132,11 @@ void resetContent(string content, string path){
 
 }
 
+/**
+ * Lee el contenido de un archivo de texto
+ * @param file
+ * @return
+ */
 string parseContent(string file){
 
     fstream archive;

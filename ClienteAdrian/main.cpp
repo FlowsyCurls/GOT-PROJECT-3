@@ -8,6 +8,12 @@
 using namespace std;
 using json = nlohmann::json;
 
+/**
+ * Funcionalidad principal del cliente de acuerdo con los comando brindados por el usuario
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char *argv[]) {
 
     //Validar si los argumentos son nulos, para que no se caiga
