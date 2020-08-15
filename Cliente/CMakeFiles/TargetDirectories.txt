@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/rebuild_cache.dir
-/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/edit_cache.dir
-/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/GOT.dir
-=======
-/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/rebuild_cache.dir
-/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/edit_cache.dir
-/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/GOT.dir
->>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58

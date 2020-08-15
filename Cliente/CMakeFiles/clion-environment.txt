@@ -1,7 +1,0 @@
-ToolSet: 1.0 (local)Options: 
-
-<<<<<<< HEAD
-Options:-DCMAKE_TOOLCHAIN_FILE=/home/heutlett/vcpkg/scripts/buildsystems/vcpkg.cmake
-=======
-Options:-DCMAKE_TOOLCHAIN_FILE=/home/jose/vcpkg/scripts/buildsystems/vcpkg.cmake
->>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58

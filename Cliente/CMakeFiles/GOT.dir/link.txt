@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-/usr/bin/c++  -g   CMakeFiles/GOT.dir/main.cpp.o CMakeFiles/GOT.dir/src/FileNode.cpp.o CMakeFiles/GOT.dir/src/Repository.cpp.o CMakeFiles/GOT.dir/src/RepositoryList.cpp.o  -o GOT  /home/heutlett/vcpkg/installed/x64-linux/debug/lib/librestclient-cppd.a /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libssl.a /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libcrypto.a -ldl /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libz.a -lpthread 
-=======
-/usr/bin/c++  -g   CMakeFiles/GOT.dir/main.cpp.o CMakeFiles/GOT.dir/src/FileNode.cpp.o CMakeFiles/GOT.dir/src/Repository.cpp.o CMakeFiles/GOT.dir/src/RepositoryList.cpp.o  -o GOT  /home/jose/vcpkg/installed/x64-linux/debug/lib/librestclient-cppd.a /home/jose/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a /home/jose/vcpkg/installed/x64-linux/debug/lib/libssl.a /home/jose/vcpkg/installed/x64-linux/debug/lib/libcrypto.a -ldl /home/jose/vcpkg/installed/x64-linux/debug/lib/libz.a -lpthread 
->>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
