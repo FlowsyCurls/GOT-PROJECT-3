@@ -1,3 +1,3 @@
 ToolSet: 1.0 (local)Options: 
 
-Options:-DCMAKE_TOOLCHAIN_FILE=/home/julian_camacho/vcpkg/scripts/buildsystems/vcpkg.cmake
+Options:-DCMAKE_TOOLCHAIN_FILE=/home/jose/vcpkg/scripts/buildsystems/vcpkg.cmake
