@@ -1,5 +1,7 @@
 package com.got.REST.controllers;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.GeneratedValue;
@@ -18,6 +20,7 @@ import com.got.REST.models.Commit;
 import com.got.REST.models.CommitEntityJSON;
 import com.got.REST.models.CommitJSON;
 import com.got.REST.models.File;
+import com.got.REST.models.MD5;
 import com.got.REST.models.Repository;
 import com.got.REST.models.RollBackJSON;
 import com.got.REST.services.IFileService;
@@ -36,7 +39,18 @@ public class CommandController {
 	@Autowired
 	IFileService fileService;
 	
+	private MD5 md5 = new MD5();
+	
 
+	
+	
+	// MD5
+	private String getMD5(String id) {
+		return md5.get(id);
+	}
+	
+	
+	
 	// REPOSITORIES //
 	
 	// By ID
@@ -46,7 +60,7 @@ public class CommandController {
 	
 	// By Name
 	private Repository getRepository(String name) { 
-		List<Repository> lista = repositoryService.getAll();
+		List<Repository> lista = repositoryService.getAll();	
 		for(int i = 0; i < lista.size(); i++) { 
 			if(lista.get(i).getName().contains(name)) { 
 				return lista.get(i);
@@ -55,7 +69,27 @@ public class CommandController {
 		return null;
 	}
 	
+	
+	
 	// COMMITS //
+	
+	// Get ALL
+	private List<Commit> getCommits(long id) {
+		List<Commit> tmp = commitService.getAll();
+		
+		// PD: No supe como inicializar un List <Commit>  nuevo xd;
+		List<Commit> commits = commitService.getAll();
+		commits.clear();
+		
+		for(int i = 0; i < tmp.size(); i++) {
+			if(tmp.get(i).getIdRepository() == id) {
+				commits.add(tmp.get(i));
+				System.out.println("Added: " + tmp.get(i).getIdCommit());
+			}
+		}
+		System.out.println("Size: " + commits.size());
+		return commits;
+	}
 	
 	// By ID
 	private Commit getCommit(long id) {
@@ -73,6 +107,8 @@ public class CommandController {
 		}
 		return null;
 	}
+	
+	
 	
 	
 	// FILE //
@@ -117,6 +153,24 @@ public class CommandController {
 		return getFile(tmp);
 	}
 	
+	
+	
+	
+	
+	@GetMapping("/Commits/{id}")
+	public String getCommitsString(@PathVariable(value = "id") long id){	
+		Repository repository = getRepository(id);
+		List<Commit> commits = getCommits(id);
+		String s = "Commits in repository " + repository.getName();
+		for (int i = 0; i < commits.size(); i++) {
+			Commit commit = commits.get(i);
+			s += "\n" + getMD5(String.valueOf(commit)) + "\t" + commit.getMessage() + "\t" + commit.getDate();
+		}
+		return s;
+	}
+	
+
+
 	@GetMapping("/getFile/{id}")
 	public String getFileInfo(@PathVariable(value = "id") long id){	
 		Repository repository = getRepository(id);
@@ -128,7 +182,7 @@ public class CommandController {
 	public @ResponseBody String commit(@RequestBody CommitJSON commitJson) {
 		Repository repository = getRepository(commitJson.getRepositoryName());
 		// Create Commit.
-		String date = "21-10-00";
+		String date = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		Commit commit = new Commit(date, commitJson.getMessage(), (int)repository.getId());
 		commitService.post(commit);
 		commit = getCommit(commit.getMessage());
@@ -137,7 +191,7 @@ public class CommandController {
 			File file = new File(date, commitJson.getFileList().get(i).getName(), (int)commit.getIdCommit(), commitJson.getFileList().get(i).getHuffmanCode());
 			fileService.post(file);
 		}
-		return String.valueOf(commit.getIdCommit());
+		return getMD5(String.valueOf(commit.getIdCommit()));
 	}
 	
 	
@@ -147,7 +201,6 @@ public class CommandController {
 	 * @param rollback
 	 * @return
 	 */
-	
 	@PostMapping("/rollback")
 	public @ResponseBody String rollback(@RequestBody RollBackJSON rollback) {
 		System.out.println(rollback.getFile());
@@ -162,7 +215,7 @@ public class CommandController {
 		// Get File.
 		File file = getFile(rollback);
 		System.out.println("Last Content" + file.getIdFile());
-		System.out.println(file.getContent());
+		System.out.println("File Content" + file.getContent());
 		String lastcontent = file.getContent();
 		return lastcontent;
 	}
