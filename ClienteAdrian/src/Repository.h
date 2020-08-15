@@ -55,6 +55,10 @@ public:
     json addToJson(json repoList);
 
     json generateListFilesJson();
+
+    json createCommit(string name, string message, json listFileNodes);
+
+    string rollbackCommand(json rollbackInfo);
 };
 
 

@@ -1,4 +1,5 @@
 
+#include <restclient-cpp/restclient.h>
 #include "Repository.h"
 
 
@@ -123,6 +124,22 @@ json Repository::addCommandSingleFile(string file){
     }
 }
 
+json Repository::createCommit(string name, string message, json listFileNodes){
+    json commit;
+    commit["repositoryName"] = name;
+    commit["message"] = message;
+    commit["fileList"] = listFileNodes;
+
+    return commit;
+
+}
+
+string Repository::rollbackCommand(json rollbackInfo){
+
+    RestClient::Response r = RestClient::post("http://localhost:8080/rollbackFile", "application/json", rollbackInfo.dump());
+    return r.body;
+
+}
 
 const string &Repository::getName() const {
     return name;
@@ -146,5 +163,5 @@ void Repository::clearList(){
 
 Repository::Repository(string pName) {
     Repository::name = pName;
-    Repository::files = vector<FileNode*>();
+    Repository::files = {};
 }

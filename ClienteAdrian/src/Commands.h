@@ -33,15 +33,23 @@ json getRepositoriesFromJson2() {
     cout << j << endl;
     return j;
 }
-/*
-void addCommand(string repoName) {
-    for (int i = 0; i < repositories.size(); ++i) {
-        if (repositories.at(i)->getName() == repoName){
-            repositories.at(i)->addCommand();
-            break;
-        }
-    }
-}*/
+
+json getCommitRegisterFromJson() {
+    string path = "./config/commitRegister.json";
+    // read a JSON file
+    ifstream i(path);
+    json j;
+    i >> j;
+    cout << j << endl;
+    return j;
+}
+
+//Hace el commit a la base de datos, la base de datos devuelve un id para identificar cada commit
+string commitToServer(json commitStructure){
+
+    RestClient::Response r = RestClient::post("http://localhost:8080/newCommit", "application/json", commitStructure.dump());
+    return r.body;
+}
 
 void createJsonFile2(json j){
     ofstream file;
@@ -50,8 +58,6 @@ void createJsonFile2(json j){
     file << j.dump();
     file.close();
 }
-
-
 
 string parseContent(const string& file){
     ifstream toParseFile(file);
