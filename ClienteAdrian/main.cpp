@@ -10,10 +10,19 @@ using json = nlohmann::json;
 
 int main(int argc, char *argv[]) {
 
+    if(argc > 1){
 
+        cout << argv[1] << endl;
 
-    RestClient::Response r = RestClient::post("http://localhost:8080/Repository?repository={\"name\": \"bla\"}", "application/json", "");
+        json j;
 
+        string s(argv[2]);
+
+        j["name"] = s;
+
+        RestClient::Response r = RestClient::post("http://localhost:8080/Repository", "application/json", j.dump());
+
+    }
 
 
     return 0;

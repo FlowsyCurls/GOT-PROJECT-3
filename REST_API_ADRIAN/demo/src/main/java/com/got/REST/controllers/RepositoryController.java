@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.got.REST.models.File;
 import com.got.REST.models.Repository;
+import com.got.REST.services.IFileService;
 import com.got.REST.services.IRepositoryService;
 
 @RestController
