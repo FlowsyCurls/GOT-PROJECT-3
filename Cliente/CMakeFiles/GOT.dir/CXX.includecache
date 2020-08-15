@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/heutlett/GOT-PROJECT-3/Cliente/json.hpp
+=======
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/json.hpp
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 algorithm
 -
 cassert
@@ -340,6 +344,7 @@ limits
 type_traits
 -
 
+<<<<<<< HEAD
 /home/heutlett/GOT-PROJECT-3/Cliente/main.cpp
 iostream
 -
@@ -355,6 +360,23 @@ src/RepositoryList.h
 /home/heutlett/GOT-PROJECT-3/Cliente/src/RepositoryList.h
 
 /home/heutlett/GOT-PROJECT-3/Cliente/src/Commands.h
+=======
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/main.cpp
+iostream
+-
+restclient-cpp/restclient.h
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/restclient-cpp/restclient.h
+src/Commands.h
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/Commands.h
+src/Repository.h
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/Repository.h
+json.hpp
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/json.hpp
+src/RepositoryList.h
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/RepositoryList.h
+
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/Commands.h
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 iostream
 -
 fstream
@@ -372,6 +394,7 @@ cstdlib
 sys/stat.h
 -
 Repository.h
+<<<<<<< HEAD
 /home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h
 
 /home/heutlett/GOT-PROJECT-3/Cliente/src/FileNode.h
@@ -379,6 +402,15 @@ iostream
 -
 
 /home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h
+=======
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/Repository.h
+
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/FileNode.h
+iostream
+-
+
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/Repository.h
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 iostream
 -
 string
@@ -394,6 +426,7 @@ fstream
 dirent.h
 -
 FileNode.h
+<<<<<<< HEAD
 /home/heutlett/GOT-PROJECT-3/Cliente/src/FileNode.h
 ../json.hpp
 /home/heutlett/GOT-PROJECT-3/Cliente/json.hpp
@@ -407,6 +440,21 @@ string
 -
 
 /home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
+=======
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/FileNode.h
+../json.hpp
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/json.hpp
+
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/RepositoryList.h
+Repository.h
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/src/Repository.h
+../json.hpp
+/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/json.hpp
+string
+-
+
+/home/jose/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 string
 -
 map
@@ -414,7 +462,13 @@ map
 cstdlib
 -
 restclient-cpp/version.h
+<<<<<<< HEAD
 /home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/version.h
 
 /home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+=======
+/home/jose/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/version.h
+
+/home/jose/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 

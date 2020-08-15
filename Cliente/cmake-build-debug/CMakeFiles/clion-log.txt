@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 /snap/clion/123/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=/home/heutlett/vcpkg/scripts/buildsystems/vcpkg.cmake -G "CodeBlocks - Unix Makefiles" /home/heutlett/GOT-PROJECT-3/Cliente
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
+=======
+/home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=/home/jose/vcpkg/scripts/buildsystems/vcpkg.cmake -G "CodeBlocks - Unix Makefiles" "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente"
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc - works
 -- Detecting C compiler ABI info
@@ -22,8 +28,16 @@
 -- Looking for pthread_create in pthread
 -- Looking for pthread_create in pthread - found
 -- Found Threads: TRUE  
+<<<<<<< HEAD
 -- Found OpenSSL: /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libcrypto.a (found suitable version "1.1.1g", minimum required is "1")  
 -- Found ZLIB: /home/heutlett/vcpkg/installed/x64-linux/debug/lib/libz.a (found suitable version "1.2.11", minimum required is "1") 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/heutlett/GOT-PROJECT-3/Cliente
+=======
+-- Found OpenSSL: /home/jose/vcpkg/installed/x64-linux/debug/lib/libcrypto.a (found suitable version "1.1.1g", minimum required is "1")  
+-- Found ZLIB: /home/jose/vcpkg/installed/x64-linux/debug/lib/libz.a (found suitable version "1.2.11", minimum required is "1") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58

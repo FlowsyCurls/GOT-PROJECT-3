@@ -59,19 +59,26 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/123/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/123/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
+=======
+CMAKE_SOURCE_DIR = "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente"
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente"
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +86,7 @@ CMAKE_BINARY_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/123/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +97,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/123/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +107,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles" "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles/progress.marks"
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles" 0
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 .PHONY : all
 
 # The main clean target

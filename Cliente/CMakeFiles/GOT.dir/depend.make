@@ -7,8 +7,13 @@ CMakeFiles/GOT.dir/main.cpp.o: src/Commands.h
 CMakeFiles/GOT.dir/main.cpp.o: src/FileNode.h
 CMakeFiles/GOT.dir/main.cpp.o: src/Repository.h
 CMakeFiles/GOT.dir/main.cpp.o: src/RepositoryList.h
+<<<<<<< HEAD
 CMakeFiles/GOT.dir/main.cpp.o: /home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
 CMakeFiles/GOT.dir/main.cpp.o: /home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+=======
+CMakeFiles/GOT.dir/main.cpp.o: /home/jose/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
+CMakeFiles/GOT.dir/main.cpp.o: /home/jose/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 
 CMakeFiles/GOT.dir/src/FileNode.cpp.o: src/FileNode.cpp
 CMakeFiles/GOT.dir/src/FileNode.cpp.o: src/FileNode.h

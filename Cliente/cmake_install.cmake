@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/heutlett/GOT-PROJECT-3/Cliente
+=======
+# Install script for directory: /home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +49,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/heutlett/GOT-PROJECT-3/Cliente/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

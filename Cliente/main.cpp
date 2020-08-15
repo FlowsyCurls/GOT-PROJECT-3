@@ -10,21 +10,41 @@ using json = nlohmann::json;
 
 int main(int argc, char *argv[]) {
 
+<<<<<<< HEAD
     RestClient::Response r = RestClient::get("http://localhost:8080/Repositories");
     cout << r.body << endl;
 
+=======
+    //Validar si los argumentos son nulos, para que no se caiga
+
+    cout << argc << endl;
+    if(argc < 2){
+        return 0;
+    }
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
     json repoList = getRepositoriesFromJson2();
+
     string command = argv[1];
 
+<<<<<<< HEAD
     cout << "argc " << argc << endl;
 
     if (command == "init" && argc > 2) {
+=======
+    if (command == "init" && argv[2] != NULL) {
+
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
         Repository* repo = new Repository(argv[2]);
         repoList = repo->initCommand(repoList);
+        // Que mande el init al server, crea el repo
     }
 
-    if (command == "add"){
+    if (command == "add" && argv[2] != NULL && argv[3] != NULL){
         if (argv[2] == "-A"){
+            //El name del repo existe, le asigno la lista de objetos json
+            if(repoList[argv[3]] != NULL){
+                
+            }
             //repoList->addCommand(argv[3]);
         } else{
 
@@ -34,6 +54,7 @@ int main(int argc, char *argv[]) {
     if (command == "help"){
 
     }
+
     createJsonFile2(repoList);
 
 

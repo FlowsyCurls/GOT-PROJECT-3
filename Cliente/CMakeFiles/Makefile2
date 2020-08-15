@@ -55,19 +55,26 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/123/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/123/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/jose/Documentos/clion-2020.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/heutlett/GOT-PROJECT-3/Cliente
+=======
+CMAKE_SOURCE_DIR = "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente"
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente"
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +101,24 @@ clean: CMakeFiles/GOT.dir/clean
 CMakeFiles/GOT.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOT.dir/build.make CMakeFiles/GOT.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles --progress-num=1,2,3,4,5 "Built target GOT"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles" --progress-num=1,2,3,4,5 "Built target GOT"
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 .PHONY : CMakeFiles/GOT.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GOT.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GOT.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/heutlett/GOT-PROJECT-3/Cliente/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles" 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GOT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jose/Escritorio/Proyecto 3/GOT-PROJECT-3/Cliente/CMakeFiles" 0
+>>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
 .PHONY : CMakeFiles/GOT.dir/rule
 
 # Convenience name for target.
