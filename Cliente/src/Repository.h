@@ -50,7 +50,7 @@ public:
 
     bool isFileIgnored(string file, vector<string> ignoredFiles);
 
-    json addCommandSingleFile(string file);
+    void addCommandSingleFile(string file);
 
     json addToJson(json repoList);
 

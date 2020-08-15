@@ -110,20 +110,12 @@ void Repository::addCommand() {
     setFiles(toAdd);
 }
 
-json Repository::addCommandSingleFile(string file){
+void Repository::addCommandSingleFile(string file){
     vector<string> toIgnoreFiles = readGotIgnoreFile();
-
-    if (!isFileIgnored(file, toIgnoreFiles)) {
-
-        json j;
-
-        j["name"] = file;
-        j["toCommit"] = true;
-        j["huffmanCode"] = "";
-
-        //Meterlo a la lista de los archivos que tiene el server
-        return j;
-    }
+    //if (isFileIgnored(file, toIgnoreFiles)) {
+    //Meterlo a la lista de los archivos que tiene el server
+    //file.toCommit = true;
+    //}
 }
 
 
@@ -149,6 +141,5 @@ void Repository::clearList(){
 
 Repository::Repository(string pName) {
     Repository::name = pName;
-    Repository::files = vector<FileNode*>();
 }
 
