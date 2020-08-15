@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
     }
 
 
+
     //cout << argc << endl;
     /*
     if(argc < 2){
@@ -28,6 +29,20 @@ int main(int argc, char *argv[]) {
     json commitRegister = getCommitRegisterFromJson();
 
     string command = argv[1];
+
+    cout << "Comando prinicpal es: " << command << endl;
+
+    if(command == "commitHistory" && argc > 1){
+
+        cout << "ENTROoOOOOOOOOOOOOOOO" << endl;
+
+        string repositoryName(argv[2]);
+        string url = "http://localhost:8080/Commits/" + repositoryName;
+        RestClient::Response r = RestClient::get(url);
+
+        cout << "El historial de commits para el repositorio " << repositoryName << " es: "<< endl << r.body << endl;
+
+    }
 
     if (command == "help"){
         cout << "entra help" << endl;
@@ -183,6 +198,8 @@ int main(int argc, char *argv[]) {
         resetContent(r.body, path);
 
     }
+
+
 
     createJsonCommitRegister(commitRegister);
     createJsonFile2(repoList);
