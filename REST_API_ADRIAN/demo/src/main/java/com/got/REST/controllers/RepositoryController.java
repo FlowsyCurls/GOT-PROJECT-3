@@ -35,7 +35,6 @@ public class RepositoryController{
 	}
 	
 	@PostMapping("/Repository")
-	
 	public @ResponseBody String add(@RequestBody Repository repository) {
 		
 		System.out.println(repository.getName());
@@ -62,9 +61,5 @@ public class RepositoryController{
 	public void update(Repository repository, long id) {
 		repositoryService.put(repository, id);
 	}
-	
-	
-	
-	
 }
 
