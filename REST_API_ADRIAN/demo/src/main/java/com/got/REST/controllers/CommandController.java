@@ -193,6 +193,7 @@ public class CommandController {
 		// Create Commit.
 		String date = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		Commit commit = new Commit(date, commitJson.getMessage(), (int)repository.getId());
+		if (getCommit(commitJson.getMessage())!=null) return "Error: Mensaje ya existente.";
 		commitService.post(commit);
 		commit = getCommit(commit.getMessage());
 		// Create Files.
