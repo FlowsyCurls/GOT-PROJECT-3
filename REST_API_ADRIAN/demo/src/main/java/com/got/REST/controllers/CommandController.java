@@ -19,6 +19,7 @@ import com.got.REST.models.CommitEntityJSON;
 import com.got.REST.models.CommitJSON;
 import com.got.REST.models.File;
 import com.got.REST.models.Repository;
+import com.got.REST.models.RollBackJSON;
 import com.got.REST.services.IFileService;
 import com.got.REST.services.ICommitService;
 import com.got.REST.services.IRepositoryService;
@@ -35,28 +36,16 @@ public class CommandController {
 	@Autowired
 	IFileService fileService;
 	
+
+	// REPOSITORIES //
 	
-	private File getFile(long id) {
-		List<File> lista = fileService.getAll();
-		for(int i = 0; i < lista.size(); i++) { 
-			if(lista.get(i).getIdFile() == id) { 
-				return lista.get(i);
-			}
-		}
-		return null;
+	// By ID
+	private Repository getRepository(long id) {
+		return repositoryService.get(id);
 	}
 	
-	private Repository getRepository(long id) { 
-		List<Repository> lista = repositoryService.getAll();
-		for(int i = 0; i < lista.size(); i++) { 
-			if(lista.get(i).getId() == id) {
-				return lista.get(i);
-			}
-		}
-		return null;
-	}
-	
-	private Repository getRepositoryByName(String name) { 
+	// By Name
+	private Repository getRepository(String name) { 
 		List<Repository> lista = repositoryService.getAll();
 		for(int i = 0; i < lista.size(); i++) { 
 			if(lista.get(i).getName().contains(name)) { 
@@ -66,22 +55,45 @@ public class CommandController {
 		return null;
 	}
 	
+	// COMMITS //
 	
-	private Commit getCommit(Commit commit) {
+	// By ID
+	private Commit getCommit(long id) {
+		return commitService.get(id);
+	}
+	
+	// By Message
+	private Commit getCommit(String message) {
 		List<Commit> lista = commitService.getAll();
 		for(int i = 0; i < lista.size(); i++) {
 			Commit tmp = lista.get(i);
-			if(tmp.getMessage().contains(commit.getMessage())){ 
+			if(tmp.getMessage().contains(message)){ 
 				return tmp;
 			}
 		}
 		return null;
 	}
 	
+	// FILE //
 	
+	// By ID
+	private File getFile(long id) {
+		return fileService.get(id);
+	}
+	
+	// By Name
+	private File getFile(String name) {
+		List<File> lista = fileService.getAll();
+		for(int i = 0; i < lista.size(); i++) { 
+			if(lista.get(i).getName() == name) { 
+				return lista.get(i);
+			}
+		}
+		return null;
+	}
+
 	@GetMapping("/getFile/{id}")
 	public String getFileInfo(@PathVariable(value = "id") long id){	
-		File file = getFile(id);
 		Repository repository = getRepository(id);
 		String s = "id: " + repository.getId() + "Repository name: " + repository.getName();
 		return s;
@@ -89,25 +101,44 @@ public class CommandController {
 	
 	@PostMapping("/newCommit")
 	public @ResponseBody String add(@RequestBody CommitJSON commitJson) {
-		Repository repository = getRepositoryByName(commitJson.getRepositoryName());
+		Repository repository = getRepository(commitJson.getRepositoryName());
 		// Create Commit.
 		String date = "21-10-00";
-		System.out.println("LLega");
 		Commit commit = new Commit(date, commitJson.getMessage(), (int)repository.getId());
-		System.out.println("Pasa new");
 		commitService.post(commit);
-		System.out.println("Se agrega commit");
-
-		commit = getCommit(commit);
+		commit = getCommit(commit.getMessage());
 		// Create Files.
 		for(int i = 0; i < commitJson.getFileList().size(); i++) {
-			
-			File file = new File(date, (int)commit.getIdCommit(), commitJson.getFileList().get(i).getHuffmanCode());
+			File file = new File(date, commitJson.getFileList().get(i).getName(), (int)commit.getIdCommit(), commitJson.getFileList().get(i).getHuffmanCode());
 			fileService.post(file);
 		}
 		return String.valueOf(commit.getIdCommit());
 	}
 	
+	
+	// Permite regresar un archivo en el tiempo a un commit específico. Para esto, se comunica al server y
+	// recupera el archivo hasta dicha versión.
+	
+	@PostMapping("/rollback")
+	public @ResponseBody String rollback(@RequestBody RollBackJSON rollback) {
+		System.out.println(rollback.getFile());
+		System.out.println(rollback.getIdCommit());
+		System.out.println(rollback.getRepositoryName());
+//		// Get Repository.
+//		Repository repository = getRepository(rollback.getRepositoryName());
+//		if (repository==null) return "Error: No existe repositorio";
+//		// Get Commit.
+//		Commit commit = getCommit(rollback.getIdCommit());
+//		if (commit==null) return "Error: No existe commit";
+//		// Get File.
+//		File file = getFile(rollback.getFile());
+//		if (file==null) return "Error: No existe archivo";
+//		
+//		System.out.print(repository.getName());
+//		System.out.print(commit.getMessage());
+//		System.out.print(file.getName());
+		return "Restored";
+	}
 	/*
 	@PutMapping("/Repository")
 	public void update(Repository repository, long id) {
