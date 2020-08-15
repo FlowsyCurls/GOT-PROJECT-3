@@ -11,7 +11,7 @@ using json = nlohmann::json;
 int main(int argc, char *argv[]) {
 
     //Validar si los argumentos son nulos, para que no se caiga
-
+ 
     //cout << argc << endl;
     if(argc < 2){
         return 0;
@@ -51,6 +51,20 @@ int main(int argc, char *argv[]) {
             //repoList[argv[3]] = repo->getFiles();
 
 
+<<<<<<< HEAD
+        } else /*if(repoList[argv[3]] != NULL)*/{
+            Repository* repo = new Repository(argv[3]);
+
+            //Si el directorio a actualizar en el repo especificado existe
+
+                json nodeFile = repo->addCommandSingleFile(s);
+                json fileNodeList = repoList[argv[3]];
+
+                cout << "Lista de nodos: " << fileNodeList << endl;
+
+                fileNodeList.push_back(nodeFile);
+
+=======
         } else if(repoList[argv[3]] != NULL){
             Repository* repo = new Repository(argv[3]);
 
@@ -58,6 +72,7 @@ int main(int argc, char *argv[]) {
             if(repoList[argv[3]][s] !=  NULL){
 
             }
+>>>>>>> master
 
         }
     }
