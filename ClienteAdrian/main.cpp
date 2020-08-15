@@ -159,6 +159,14 @@ int main(int argc, char *argv[]) {
 
         string huffman = repo->rollbackCommand(rollbackInfo);
 
+        "./config/config.json";
+        string fileName(argv[2]);
+        string repositoryName(argv[4]);
+        string path = "./" + repositoryName + "/" + fileName;
+
+        cout << "path: " << path << endl;
+
+        resetContent(huffman, path);
 
 
         cout << "Contenido del archivo: " << huffman << endl;
@@ -167,16 +175,13 @@ int main(int argc, char *argv[]) {
 
     if (command == "reset" && argv[2] != NULL && argv[3] != NULL){
 
-        string pastContent;
-        for (int i = 0; i < repoList[argv[3]].size(); ++i) {
-            if (repoList[argv[3]][i]["name"] == argv[2]){
-                pastContent = repoList[argv[3]][i]["content"];
-            }
-        }
-        cout << "contenido anterior: " << pastContent << endl;
-        string repo(argv[3]);
-        string file(argv[2]);
-        resetContent(pastContent, "./" + repo + "/" + file);
+        string fileName(argv[2]);
+        string url = "http://localhost:8080/reset/?name=" + fileName;
+        RestClient::Response r = RestClient::post(url, "application/json", "");
+        string repositoryName(argv[3]);
+        string path = "./" + repositoryName + "/" + fileName;
+        resetContent(r.body, path);
+
     }
 
     createJsonCommitRegister(commitRegister);
