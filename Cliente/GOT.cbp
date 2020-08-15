@@ -89,6 +89,33 @@
 		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/main.cpp">
 			<Option target="GOT"/>
 		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/Commands.h">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/FileManager.h">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/FileNode.cpp">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/FileNode.h">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/Huffman.h">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.cpp">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/RepositoryList.cpp">
+			<Option target="GOT"/>
+		</Unit>
+		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/src/RepositoryList.h">
+			<Option target="GOT"/>
+		</Unit>
 		<Unit filename="/home/heutlett/GOT-PROJECT-3/Cliente/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

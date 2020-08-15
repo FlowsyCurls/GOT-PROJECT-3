@@ -10,10 +10,15 @@ using json = nlohmann::json;
 
 int main(int argc, char *argv[]) {
 
+    RestClient::Response r = RestClient::get("http://localhost:8080/Repositories");
+    cout << r.body << endl;
+
     json repoList = getRepositoriesFromJson2();
     string command = argv[1];
 
-    if (command == "init") {
+    cout << "argc " << argc << endl;
+
+    if (command == "init" && argc > 2) {
         Repository* repo = new Repository(argv[2]);
         repoList = repo->initCommand(repoList);
     }

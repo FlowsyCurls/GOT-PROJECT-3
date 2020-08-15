@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/json.hpp
+/home/heutlett/GOT-PROJECT-3/Cliente/json.hpp
 algorithm
 -
 cassert
@@ -340,21 +340,21 @@ limits
 type_traits
 -
 
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/main.cpp
+/home/heutlett/GOT-PROJECT-3/Cliente/main.cpp
 iostream
 -
 restclient-cpp/restclient.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/restclient-cpp/restclient.h
+/home/heutlett/GOT-PROJECT-3/Cliente/restclient-cpp/restclient.h
 src/Commands.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Commands.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/Commands.h
 src/Repository.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h
 json.hpp
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/json.hpp
+/home/heutlett/GOT-PROJECT-3/Cliente/json.hpp
 src/RepositoryList.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/RepositoryList.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/RepositoryList.h
 
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Commands.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/Commands.h
 iostream
 -
 fstream
@@ -372,17 +372,13 @@ cstdlib
 sys/stat.h
 -
 Repository.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h
 
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/FileNode.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/FileNode.h
 iostream
 -
 
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.cpp
-Repository.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.h
-
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h
 iostream
 -
 string
@@ -398,27 +394,19 @@ fstream
 dirent.h
 -
 FileNode.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/FileNode.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/FileNode.h
 ../json.hpp
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/json.hpp
+/home/heutlett/GOT-PROJECT-3/Cliente/json.hpp
 
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/RepositoryList.cpp
-RepositoryList.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/RepositoryList.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/RepositoryList.h
 Repository.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.h
+/home/heutlett/GOT-PROJECT-3/Cliente/src/Repository.h
 ../json.hpp
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/json.hpp
-
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/RepositoryList.h
-Repository.h
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/src/Repository.h
-../json.hpp
-/home/julian_camacho/Documentos/Algoritmos y Estructuras de Datos II/GOT-PROJECT-3/Cliente/json.hpp
+/home/heutlett/GOT-PROJECT-3/Cliente/json.hpp
 string
 -
 
-/home/julian_camacho/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
+/home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
 string
 -
 map
@@ -426,7 +414,7 @@ map
 cstdlib
 -
 restclient-cpp/version.h
-/home/julian_camacho/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/version.h
+/home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/version.h
 
-/home/julian_camacho/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+/home/heutlett/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
 
