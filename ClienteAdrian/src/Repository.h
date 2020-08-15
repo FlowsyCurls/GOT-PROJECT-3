@@ -59,6 +59,8 @@ public:
     json createCommit(string name, string message, json listFileNodes);
 
     string rollbackCommand(json rollbackInfo);
+
+    string resetCommand(json);
 };
 
 

@@ -62,6 +62,7 @@ json Repository::generateListFilesJson(){
         objFile["name"] = fileNodes[i]->getName();
         objFile["toCommit"] = fileNodes[i]->isToCommit();
         objFile["huffmanCode"] = fileNodes[i]->getHuffmanCode();
+        objFile["content"] = fileNodes[i]->getContent();
 
         //Meto el objeto a la lista json
         j.push_back(objFile);
@@ -138,6 +139,10 @@ string Repository::rollbackCommand(json rollbackInfo){
 
     RestClient::Response r = RestClient::post("http://localhost:8080/rollbackFile", "application/json", rollbackInfo.dump());
     return r.body;
+
+}
+
+string Repository::resetCommand(json){
 
 }
 

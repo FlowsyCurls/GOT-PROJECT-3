@@ -12,6 +12,7 @@
 #include <dirent.h>
 #include <sys/types.h>
 #include <cstdlib>
+#include <stdlib.h>
 #include <sys/stat.h>
 //#include "FileNode.h"
 #include "Repository.h"
@@ -48,6 +49,7 @@ json getCommitRegisterFromJson() {
 string commitToServer(json commitStructure){
 
     RestClient::Response r = RestClient::post("http://localhost:8080/newCommit", "application/json", commitStructure.dump());
+    cout << r.body << endl;
     return r.body;
 }
 
@@ -59,7 +61,47 @@ void createJsonFile2(json j){
     file.close();
 }
 
-string parseContent(const string& file){
+void createJsonCommitRegister(json j){
+    ofstream file;
+    cout << "Crea json" << endl;
+    file.open("./config/commitRegister.json", ios::out);
+    file << j.dump();
+    file.close();
+}
+
+void resetContent(string content, string path){
+
+    ofstream outDir;
+    outDir.open (path);
+    outDir << content;
+    outDir.close();
+
+}
+
+string parseContent(string file){
+
+    fstream archive;
+
+    string line;
+    string content = "";
+
+    if (!archive.is_open()){
+        cout << "archivo no esta abierto" << endl;
+        archive.open(file.c_str(), ios::in);
+
+        while (!archive.eof()){
+            getline(archive,line);
+            content += line + "\n";
+            cout <<line << endl;
+        }
+
+        archive.close();
+
+    }
+
+    return content;
+
+    /*
     ifstream toParseFile(file);
     string line;
     if (toParseFile.is_open()) {
@@ -68,6 +110,8 @@ string parseContent(const string& file){
         }
         toParseFile.close();
     }
+     */
+
 }
 
 

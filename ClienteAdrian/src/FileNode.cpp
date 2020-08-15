@@ -8,6 +8,7 @@ FileNode::FileNode(string pName){
     name = pName;
     toCommit = false;
     huffmanCode = "";
+    content = "";
 }
 
 const string &FileNode::getHuffmanCode() const {
@@ -32,5 +33,13 @@ bool FileNode::isToCommit() const {
 
 void FileNode::setToCommit(bool toCommit) {
     FileNode::toCommit = toCommit;
+}
+
+const string &FileNode::getContent() const {
+    return content;
+}
+
+void FileNode::setContent(const string &content) {
+    FileNode::content = content;
 }
 
