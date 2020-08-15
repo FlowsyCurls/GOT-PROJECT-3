@@ -188,7 +188,7 @@ public class CommandController {
 		commit = getCommit(commit.getMessage());
 		// Create Files.
 		for(int i = 0; i < commitJson.getFileList().size(); i++) {
-			File file = new File(date, commitJson.getFileList().get(i).getName(), (int)commit.getIdCommit(), commitJson.getFileList().get(i).getHuffmanCode());
+			File file = new File(date, commitJson.getFileList().get(i).getName(), (int)commit.getIdCommit(), commitJson.getFileList().get(i).getContent());
 			fileService.post(file);
 		}
 		return getMD5(String.valueOf(commit.getIdCommit()));

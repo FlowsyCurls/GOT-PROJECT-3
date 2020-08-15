@@ -4,15 +4,35 @@ import java.io.Serializable;
 
 public class CommitEntityJSON implements Serializable{
 	
+
 	private String content;
+	private String huffmanCode;
 	private String name;	
 	boolean toCommit;
 	
-	public String getHuffmanCode() {
+	
+	public CommitEntityJSON(String content, String huffmanCode, String name, boolean toCommit) {
+		super();
+		this.content = content;
+		this.name = name;
+		this.toCommit = toCommit;
+	}
+	public CommitEntityJSON() {
+	}
+	
+	
+	
+	public String getContent() {
 		return content;
 	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getHuffmanCode() {
+		return huffmanCode;
+	}
 	public void setHuffmanCode(String huffmanCode) {
-		this.content = huffmanCode;
+		this.huffmanCode = huffmanCode;
 	}
 	public String getName() {
 		return name;
@@ -26,15 +46,7 @@ public class CommitEntityJSON implements Serializable{
 	public void setToCommit(boolean toCommit) {
 		this.toCommit = toCommit;
 	}
-	public CommitEntityJSON(String huffmanCode, String name, boolean toCommit) {
-		super();
-		this.content = huffmanCode;
-		this.name = name;
-		this.toCommit = toCommit;
-	}
-	public CommitEntityJSON() {
-	}
-	
+
 	
 
 }
