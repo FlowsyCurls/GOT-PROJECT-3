@@ -170,7 +170,6 @@ public class CommandController {
 	
 	
 	
-	
 	@GetMapping("/Commits/{name}")
 	public String getCommitsString(@PathVariable(value = "name") String name){
 		Repository repository = getRepository(name);
@@ -178,12 +177,11 @@ public class CommandController {
 		String s = "";
 		for (int i = 0; i < commits.size(); i++) {
 			Commit commit = commits.get(i);
-			s += "\n" + encode(String.valueOf(commit)) + "\t" + commit.getMessage() + "\t" + commit.getDate();
+			s += encode(String.valueOf(commit)) + "\t" + commit.getMessage() + "\t" + commit.getDate() +"\n";
 		}
 		return s;
 	}
 	
-
 
 	@GetMapping("/getFile/{id}")
 	public String getFileInfo(@PathVariable(value = "id") long id){	
