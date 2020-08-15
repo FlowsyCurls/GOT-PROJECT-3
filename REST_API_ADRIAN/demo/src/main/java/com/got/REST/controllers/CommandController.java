@@ -171,10 +171,10 @@ public class CommandController {
 	
 	
 	
-	@GetMapping("/Commits/{id}")
-	public String getCommitsString(@PathVariable(value = "id") long id){	
-		Repository repository = getRepository(id);
-		List<Commit> commits = getCommits(id);
+	@GetMapping("/Commits/{name}")
+	public String getCommitsString(@PathVariable(value = "name") String name){
+		Repository repository = getRepository(name);
+		List<Commit> commits = getCommits(repository.getId());
 		String s = "Commits in repository " + repository.getName();
 		for (int i = 0; i < commits.size(); i++) {
 			Commit commit = commits.get(i);
