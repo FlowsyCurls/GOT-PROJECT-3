@@ -20,6 +20,8 @@ public class File implements Serializable {
 	
 	private String date;
 	
+	private String name;
+	
 	private int idCommit;
 	
 	private String content;
@@ -56,16 +58,28 @@ public class File implements Serializable {
 	public void setIdCommit(int idCommit) {
 		this.idCommit = idCommit;
 	}
+	
+	public String getName() {
+		return name;
+	}
 
-	public File(String date, int idCommit, String content) {
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public File(String date, String name, int idCommit, String content) {
 		super();
 		this.date = date;
+		this.name = name;
 		this.idCommit = idCommit;
 		this.content = content;
 	}
 
 	public File() {
 	}
+
+
 	
 	
 }
