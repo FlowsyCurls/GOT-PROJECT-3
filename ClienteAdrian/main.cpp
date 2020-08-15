@@ -15,13 +15,21 @@ int main(int argc, char *argv[]) {
 
 
     //cout << argc << endl;
+    /*
     if(argc < 2){
         return 0;
     }
+     */
     json repoList = getRepositoriesFromJson2();
     json commitRegister = getCommitRegisterFromJson();
 
     string command = argv[1];
+
+    if (command == "help"){
+        cout << "entra help" << endl;
+        string content = parseContent("./resources/Help.txt");
+        cout << content << endl;
+    }
 
     if (command == "init" && argv[2] != NULL) {
 
@@ -52,6 +60,11 @@ int main(int argc, char *argv[]) {
             Repository* repo = new Repository(argv[3]);
             //Se hacen repos para utilizar funcionalidades
             repo->addCommand();
+
+            for (int i = 0; i < repo->getFiles().size(); ++i) {
+                repo->getFiles()[i]->setContent(parseContent("./" + repo->getName() + "/" + repo->getFiles()[i]->getName()));
+            }
+
             repoList[argv[3]] = repo->generateListFilesJson();
 
 
@@ -83,10 +96,6 @@ int main(int argc, char *argv[]) {
         repoList[argv[3]] = fileNodeList;
 
         }
-    }
-
-    if (command == "help"){
-        parseContent("./resources/Help.txt");
     }
 
     if (command == "commit" && argv[2] != NULL && argv[3] != NULL){
@@ -122,6 +131,13 @@ int main(int argc, char *argv[]) {
             commitRegister[argv[3]].push_back(commitToServer(commitStructure));
         }
 
+        //Poner todos los fileNodes en toCommit = false, ya que se hizo el commmit de éstos
+        for (int i = 0; i < fileNodeList.size(); ++i) {
+            fileNodeList[i]["toCommit"] = false;
+        }
+
+        repoList[argv[3]] = fileNodeList;
+
     }
 
     if(command == "rollback" && argv[2] != NULL && argv[3] != NULL && argv[4] != NULL){
@@ -143,6 +159,21 @@ int main(int argc, char *argv[]) {
 
     }
 
+    if (command == "reset" && argv[2] != NULL && argv[3] != NULL){
+
+        string pastContent;
+        for (int i = 0; i < repoList[argv[3]].size(); ++i) {
+            if (repoList[argv[3]][i]["name"] == argv[2]){
+                pastContent = repoList[argv[3]][i]["content"];
+            }
+        }
+        cout << "contenido anterior: " << pastContent << endl;
+        string repo(argv[3]);
+        string file(argv[2]);
+        resetContent(pastContent, "./" + repo + "/" + file);
+    }
+
+    createJsonCommitRegister(commitRegister);
     createJsonFile2(repoList);
 
 

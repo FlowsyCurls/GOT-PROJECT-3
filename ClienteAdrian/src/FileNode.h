@@ -11,6 +11,13 @@ class FileNode {
     string name;
     bool toCommit;
     string huffmanCode;
+public:
+    const string &getContent() const;
+
+    void setContent(const string &content);
+
+private:
+    string content;
 
 public:
     FileNode();
