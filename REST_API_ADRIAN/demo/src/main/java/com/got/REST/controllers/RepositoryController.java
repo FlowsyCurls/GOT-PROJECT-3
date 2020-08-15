@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,25 +33,25 @@ public class RepositoryController{
 	}
 	
 	@PostMapping("/Repository")
-
-	public @ResponseBody String add(Repository repository) {
+	
+	public @ResponseBody String add(@RequestBody Repository repository) {
 		
 		System.out.println(repository.getName());
 		
-		/*
+		
 		List<Repository> listOfRepositories = repositoryService.getAll();
 		
 		for(int i = 0; i < listOfRepositories.size(); i++) { 
 			
 			if(listOfRepositories.get(i).getName().contains(repository.getName())) { 
 				
-				return; //No se agrega a la tabla porque ya existe
+				return "Ya existe un repositorio con este nombre"; //No se agrega a la tabla porque ya existe
 				
 			}
 			
 		}
 		
-		repositoryService.post(repository);*/
+		repositoryService.post(repository);
 		
 		return "Saved";
 	}
