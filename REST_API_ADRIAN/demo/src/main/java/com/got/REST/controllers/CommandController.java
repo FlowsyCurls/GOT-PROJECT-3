@@ -87,10 +87,8 @@ public class CommandController {
 		for(int i = 0; i < tmp.size(); i++) {
 			if(tmp.get(i).getIdRepository() == id) {
 				commits.add(tmp.get(i));
-				System.out.println("Added: " + tmp.get(i).getIdCommit());
 			}
 		}
-		System.out.println("Size: " + commits.size());
 		return commits;
 	}
 	
@@ -115,7 +113,6 @@ public class CommandController {
 		List<Commit> tmp = getCommits(repositoryID);
 		for(int i = 0; i < tmp.size(); i++) {
 			if (decode(encoded, String.valueOf(tmp.get(i).getIdCommit()))) {
-				System.out.println("Found: " + encoded + " --->> " + tmp.get(i).getIdCommit());
 				return tmp.get(i);
 			}
 		}
@@ -144,11 +141,11 @@ public class CommandController {
 	}
 
 	// By Rollback
-	private File getFile(RollBackJSON rollback) {
+	private File getFile(String name, String IdCommit) {
 		List<File> lista = fileService.getAll();
 		for(int i = 0; i < lista.size(); i++) { 
 			File file = lista.get(i);
-			if(file.getIdCommit() == Integer.valueOf(rollback.getIdCommit()) && file.getName().contains(rollback.getFile())) { 
+			if(file.getName().equals(name) && file.getIdCommit() == Integer.valueOf(IdCommit)) { 
 				return lista.get(i);
 			}
 		}
@@ -177,7 +174,7 @@ public class CommandController {
 		String s = "";
 		for (int i = 0; i < commits.size(); i++) {
 			Commit commit = commits.get(i);
-			s += encode(String.valueOf(commit)) + "\t" + commit.getMessage() + "\t" + commit.getDate() +"\n";
+			s += encode(String.valueOf(commit.getIdCommit())) + "\t" + commit.getMessage() + "\t" + commit.getDate() +"\n";
 		}
 		return s;
 	}
@@ -225,9 +222,12 @@ public class CommandController {
 		if (commit==null) return "Error: No existe commit";
 		
 		// Get File.
-		File file = getFile(rollback.getFile());
-		System.out.println("Last Content" + file.getIdFile());
+		File file = getFile(rollback.getFile(), String.valueOf(commit.getIdCommit()));
+		
+		// Prints
+		System.out.println("File " + file.getName() + " restored to commit " + commit.getIdCommit() + " : " + commit.getMessage());
 		System.out.println("File Content" + file.getContent());
+		System.out.println("File Date" + file.getDate());
 		
 		return file.getContent();
 	}
