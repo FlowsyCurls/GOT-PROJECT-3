@@ -12,6 +12,10 @@ int main(int argc, char *argv[]) {
 
     //Validar si los argumentos son nulos, para que no se caiga
 
+    if(argc ==  1){
+        cout << "No se especificaron comandos"<<endl;
+        return 0;
+    }
 
 
     //cout << argc << endl;
@@ -155,7 +159,9 @@ int main(int argc, char *argv[]) {
 
         string huffman = repo->rollbackCommand(rollbackInfo);
 
-        cout << huffman << endl;
+
+
+        cout << "Contenido del archivo: " << huffman << endl;
 
     }
 
