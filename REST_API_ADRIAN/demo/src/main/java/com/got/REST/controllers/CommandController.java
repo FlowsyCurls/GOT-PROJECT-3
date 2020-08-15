@@ -74,6 +74,7 @@ public class CommandController {
 		return null;
 	}
 	
+	
 	// FILE //
 	
 	// By ID
@@ -85,13 +86,37 @@ public class CommandController {
 	private File getFile(String name) {
 		List<File> lista = fileService.getAll();
 		for(int i = 0; i < lista.size(); i++) { 
-			if(lista.get(i).getName() == name) { 
+			if(lista.get(i).getName().contains(name)) { 
 				return lista.get(i);
 			}
 		}
 		return null;
 	}
 
+	// By Rollback
+	private File getFile(RollBackJSON rollback) {
+		List<File> lista = fileService.getAll();
+		for(int i = 0; i < lista.size(); i++) { 
+			File file = lista.get(i);
+			if(file.getIdCommit() == Integer.valueOf(rollback.getIdCommit()) && file.getName().contains(rollback.getFile())) { 
+				return lista.get(i);
+			}
+		}
+		return null;
+	}
+	
+	// By Name
+	private File getLastCommitFile(String name) {
+		List<File> lista = fileService.getAll();
+		long tmp = 0;
+		for(int i = 0; i < lista.size(); i++) { 
+			if(lista.get(i).getName().equals(name)) { 
+				tmp = lista.get(i).getIdFile();
+			}
+		}
+		return getFile(tmp);
+	}
+	
 	@GetMapping("/getFile/{id}")
 	public String getFileInfo(@PathVariable(value = "id") long id){	
 		Repository repository = getRepository(id);
@@ -100,7 +125,7 @@ public class CommandController {
 	}
 	
 	@PostMapping("/newCommit")
-	public @ResponseBody String add(@RequestBody CommitJSON commitJson) {
+	public @ResponseBody String commit(@RequestBody CommitJSON commitJson) {
 		Repository repository = getRepository(commitJson.getRepositoryName());
 		// Create Commit.
 		String date = "21-10-00";
@@ -116,29 +141,43 @@ public class CommandController {
 	}
 	
 	
-	// Permite regresar un archivo en el tiempo a un commit específico. Para esto, se comunica al server y
-	// recupera el archivo hasta dicha versión.
+	/**
+	 * Permite regresar un archivo en el tiempo a un commit específico. Para esto, se comunica al server y
+	 * recupera el archivo hasta dicha version.
+	 * @param rollback
+	 * @return
+	 */
 	
 	@PostMapping("/rollback")
 	public @ResponseBody String rollback(@RequestBody RollBackJSON rollback) {
 		System.out.println(rollback.getFile());
 		System.out.println(rollback.getIdCommit());
 		System.out.println(rollback.getRepositoryName());
-//		// Get Repository.
-//		Repository repository = getRepository(rollback.getRepositoryName());
-//		if (repository==null) return "Error: No existe repositorio";
-//		// Get Commit.
-//		Commit commit = getCommit(rollback.getIdCommit());
-//		if (commit==null) return "Error: No existe commit";
-//		// Get File.
-//		File file = getFile(rollback.getFile());
-//		if (file==null) return "Error: No existe archivo";
-//		
-//		System.out.print(repository.getName());
-//		System.out.print(commit.getMessage());
-//		System.out.print(file.getName());
-		return "Restored";
+		// Get Repository.
+		Repository repository = getRepository(rollback.getRepositoryName());
+		if (repository==null) return "Error: No existe repositorio";
+		// Get Commit.
+		Commit commit = getCommit(Integer.valueOf(rollback.getIdCommit()));
+		if (commit==null) return "Error: No existe commit";
+		// Get File.
+		File file = getFile(rollback);
+		System.out.println("Last Content" + file.getIdFile());
+		System.out.println(file.getContent());
+		String lastcontent = file.getContent();
+		return lastcontent;
 	}
+	
+	/**
+	 * Deshace cambios locales para un archivo y lo regresa al último commit.
+	 * @param name
+	 * @return
+	 */
+	@PostMapping("/reset")
+	public @ResponseBody String reset(String name) {
+		System.out.println(name);
+		return getLastCommitFile(name).getContent();
+	}
+	
 	/*
 	@PutMapping("/Repository")
 	public void update(Repository repository, long id) {
