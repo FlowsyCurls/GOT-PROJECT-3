@@ -10,34 +10,19 @@ using json = nlohmann::json;
 
 int main(int argc, char *argv[]) {
 
-<<<<<<< HEAD
-    RestClient::Response r = RestClient::get("http://localhost:8080/Repositories");
-    cout << r.body << endl;
-
-=======
     //Validar si los argumentos son nulos, para que no se caiga
 
     //cout << argc << endl;
     if(argc < 2){
         return 0;
     }
->>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
     json repoList = getRepositoriesFromJson2();
 
     string command = argv[1];
 
-<<<<<<< HEAD
-    cout << "argc " << argc << endl;
-
-    if (command == "init" && argc > 2) {
-=======
     if (command == "init" && argv[2] != NULL) {
 
-<<<<<<< HEAD
->>>>>>> 19406b3444ea3090580dd2999b3978feae1d4f58
-=======
         cout << argv[2] << endl;
->>>>>>> 1198f2de9edaf69bba879e491fe3be1ca0fde26b
         Repository* repo = new Repository(argv[2]);
         repoList = repo->initCommand(repoList);
         //string  s = "prueba";
@@ -66,8 +51,13 @@ int main(int argc, char *argv[]) {
             //repoList[argv[3]] = repo->getFiles();
 
 
-        } else if(repoList[s] != NULL){
+        } else if(repoList[argv[3]] != NULL){
             Repository* repo = new Repository(argv[3]);
+
+            //Si el directorio a actualizar en el repo especificado existe
+            if(repoList[argv[3]][s] !=  NULL){
+
+            }
 
         }
     }
