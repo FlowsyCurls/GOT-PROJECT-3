@@ -137,7 +137,7 @@ json Repository::createCommit(string name, string message, json listFileNodes){
 
 string Repository::rollbackCommand(json rollbackInfo){
 
-    RestClient::Response r = RestClient::post("http://localhost:8080/rollbackFile", "application/json", rollbackInfo.dump());
+    RestClient::Response r = RestClient::post("http://localhost:8080/rollback", "application/json", rollbackInfo.dump());
     return r.body;
 
 }
