@@ -45,8 +45,11 @@ public class CommandController {
 	
 	
 	// MD5
-	private String getMD5(String id) {
-		return md5.get(id);
+	private String encode(String id) {
+		return md5.encrypt(id);
+	}
+	private boolean decode(String orig, String compare) {		
+		return md5.matching(orig, compare);
 	}
 	
 	
@@ -73,7 +76,7 @@ public class CommandController {
 	
 	// COMMITS //
 	
-	// Get ALL
+	// Get ALL Commits in repo.
 	private List<Commit> getCommits(long id) {
 		List<Commit> tmp = commitService.getAll();
 		
@@ -103,6 +106,17 @@ public class CommandController {
 			Commit tmp = lista.get(i);
 			if(tmp.getMessage().contains(message)){ 
 				return tmp;
+			}
+		}
+		return null;
+	}
+	
+	private Commit getCommit(long repositoryID, String encoded) {
+		List<Commit> tmp = getCommits(repositoryID);
+		for(int i = 0; i < tmp.size(); i++) {
+			if (decode(encoded, String.valueOf(tmp.get(i).getIdCommit()))) {
+				System.out.println("Found: " + encoded + " --->> " + tmp.get(i).getIdCommit());
+				return tmp.get(i);
 			}
 		}
 		return null;
@@ -164,7 +178,7 @@ public class CommandController {
 		String s = "Commits in repository " + repository.getName();
 		for (int i = 0; i < commits.size(); i++) {
 			Commit commit = commits.get(i);
-			s += "\n" + getMD5(String.valueOf(commit)) + "\t" + commit.getMessage() + "\t" + commit.getDate();
+			s += "\n" + encode(String.valueOf(commit)) + "\t" + commit.getMessage() + "\t" + commit.getDate();
 		}
 		return s;
 	}
@@ -191,7 +205,7 @@ public class CommandController {
 			File file = new File(date, commitJson.getFileList().get(i).getName(), (int)commit.getIdCommit(), commitJson.getFileList().get(i).getContent());
 			fileService.post(file);
 		}
-		return getMD5(String.valueOf(commit.getIdCommit()));
+		return encode(String.valueOf(commit.getIdCommit()));
 	}
 	
 	
@@ -203,21 +217,21 @@ public class CommandController {
 	 */
 	@PostMapping("/rollback")
 	public @ResponseBody String rollback(@RequestBody RollBackJSON rollback) {
-		System.out.println(rollback.getFile());
-		System.out.println(rollback.getIdCommit());
-		System.out.println(rollback.getRepositoryName());
+	
 		// Get Repository.
 		Repository repository = getRepository(rollback.getRepositoryName());
 		if (repository==null) return "Error: No existe repositorio";
+		
 		// Get Commit.
-		Commit commit = getCommit(Integer.valueOf(rollback.getIdCommit()));
+		Commit commit = getCommit(repository.getId(), rollback.getIdCommit());
 		if (commit==null) return "Error: No existe commit";
+		
 		// Get File.
-		File file = getFile(rollback);
+		File file = getFile(rollback.getFile());
 		System.out.println("Last Content" + file.getIdFile());
 		System.out.println("File Content" + file.getContent());
-		String lastcontent = file.getContent();
-		return lastcontent;
+		
+		return file.getContent();
 	}
 	
 	/**
@@ -226,7 +240,7 @@ public class CommandController {
 	 * @return
 	 */
 	@PostMapping("/reset")
-	public @ResponseBody String reset(String name) {
+	public String reset(String name) {
 		System.out.println(name);
 		return getLastCommitFile(name).getContent();
 	}
