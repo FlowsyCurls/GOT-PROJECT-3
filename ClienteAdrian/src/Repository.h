@@ -12,7 +12,7 @@
 #include <fstream>
 #include <dirent.h>
 #include "FileNode.h"
-#include "../json.hpp"
+#include "json.hpp"
 
 using json = nlohmann::json;
 using namespace std;
@@ -50,7 +50,7 @@ public:
 
     bool isFileIgnored(string file, vector<string> ignoredFiles);
 
-    void addCommandSingleFile(string file);
+    json addCommandSingleFile(string file);
 
     json addToJson(json repoList);
 

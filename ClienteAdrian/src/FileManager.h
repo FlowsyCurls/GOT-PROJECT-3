@@ -6,7 +6,7 @@
 #define GOT_FILEMANAGER_H
 #include <iostream>
 #include <fstream>
-#include "../json.hpp"
+#include "json.hpp"
 #include "Repository.h"
 
 using namespace std;

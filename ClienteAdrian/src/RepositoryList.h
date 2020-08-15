@@ -5,7 +5,7 @@
 #ifndef GOT_REPOSITORYLIST_H
 #define GOT_REPOSITORYLIST_H
 #include "Repository.h"
-#include "../json.hpp"
+#include "json.hpp"
 #include <string>
 
 using json = nlohmann::json;
