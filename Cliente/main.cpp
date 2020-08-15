@@ -11,7 +11,7 @@ using json = nlohmann::json;
 int main(int argc, char *argv[]) {
 
     //Validar si los argumentos son nulos, para que no se caiga
- 
+
     //cout << argc << endl;
     if(argc < 2){
         return 0;
@@ -52,6 +52,7 @@ int main(int argc, char *argv[]) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         } else /*if(repoList[argv[3]] != NULL)*/{
             Repository* repo = new Repository(argv[3]);
 
@@ -74,6 +75,11 @@ int main(int argc, char *argv[]) {
             }
 >>>>>>> master
 
+=======
+        } else if(repoList[s] != NULL){
+            Repository* repo = new Repository(argv[3]);
+
+>>>>>>> parent of 8f552f9... [Added] se actualiza el cliente
         }
     }
 
