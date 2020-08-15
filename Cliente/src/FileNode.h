@@ -10,6 +10,7 @@ using namespace std;
 class FileNode {
     string name;
     bool toCommit;
+    string huffmanCode;
 
 public:
     FileNode();
@@ -23,6 +24,10 @@ public:
     bool isToCommit() const;
 
     void setToCommit(bool toCommit);
+
+    const string &getHuffmanCode() const;
+
+    void setHuffmanCode(const string &huffmanCode);
 };
 
 

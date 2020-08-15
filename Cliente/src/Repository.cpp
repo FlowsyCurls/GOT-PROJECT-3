@@ -41,13 +41,36 @@ vector<FileNode*> Repository::getDirFiles() {
     vector<FileNode*> listDir;
     if (dir != NULL) {
         while ((entry = readdir(dir)) != NULL) {
-            if(entry->d_name != "." && entry->d_name != ".."){
+            string s1(entry->d_name);
+            if(s1 != "." && s1 != ".."){
                 listDir.push_back(new FileNode(entry->d_name));
             }
         }
     }
     closedir(dir);
+    generateListFilesJson();
     return listDir;
+}
+
+json Repository::generateListFilesJson(){
+
+    json j;
+
+    vector<FileNode*> fileNodes = this->getFiles();
+
+    for (int i = 0; i < fileNodes.size(); ++i) {
+        json objFile;
+        //Creo objeto que representan los archivos individuales
+        objFile["name"] = fileNodes[i]->getName();
+        objFile["toCommit"] = fileNodes[i]->isToCommit();
+        objFile["huffmanCode"] = fileNodes[i]->getHuffmanCode();
+
+        //Meto el objeto a la lista json
+        j.push_back(objFile);
+
+    }
+
+    return j;
 }
 
 bool Repository::isFileIgnored(string file, vector<string> ignoredFiles){
@@ -88,7 +111,7 @@ void Repository::addCommand() {
 }
 
 void Repository::addCommandSingleFile(string file){
-    //vector<string> toIgnoreFiles = readGotIgnoreFile();
+    vector<string> toIgnoreFiles = readGotIgnoreFile();
     //if (isFileIgnored(file, toIgnoreFiles)) {
     //Meterlo a la lista de los archivos que tiene el server
     //file.toCommit = true;
