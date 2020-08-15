@@ -1,8 +1,8 @@
-const express = require('express');
-const app = express();
+const express = require('express'); // call express
+const app = express(); // define our app using 
 
 // Settings
-app.set('port', process.env.PORT || 2100);
+app.set('port', process.env.PORT || 3000);
 
 // Middlewares
 app.use(express.json());

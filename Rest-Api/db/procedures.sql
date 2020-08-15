@@ -1,8 +1,3 @@
-USE `got`;
-DROP procedure IF EXISTS `repositoryAddOrEdit`;
-
-DELIMITER $$
-USE `got`$$
 CREATE PROCEDURE `repositoryAddOrEdit` (
   IN _id INT,
   IN _name VARCHAR(45)

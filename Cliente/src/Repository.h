@@ -53,6 +53,8 @@ public:
     void addCommandSingleFile(string file);
 
     json addToJson(json repoList);
+
+    json generateListFilesJson();
 };
 
 

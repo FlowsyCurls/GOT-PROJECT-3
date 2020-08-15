@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestParam;
+=======
+>>>>>>> 1198f2de9edaf69bba879e491fe3be1ca0fde26b
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,7 +35,10 @@ public class RepositoryController{
 	}
 	
 	@PostMapping("/Repository")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1198f2de9edaf69bba879e491fe3be1ca0fde26b
 	public @ResponseBody String add(String repository) {
 		
 		System.out.println(repository);

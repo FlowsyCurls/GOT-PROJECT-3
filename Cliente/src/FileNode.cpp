@@ -7,7 +7,17 @@
 FileNode::FileNode(string pName){
     name = pName;
     toCommit = false;
+    huffmanCode = "";
 }
+
+const string &FileNode::getHuffmanCode() const {
+    return huffmanCode;
+}
+
+void FileNode::setHuffmanCode(const string &huffmanCode) {
+    FileNode::huffmanCode = huffmanCode;
+}
+
 const string& FileNode::getName() const {
     return name;
 }
