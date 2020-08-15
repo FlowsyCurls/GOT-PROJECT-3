@@ -12,6 +12,8 @@ int main(int argc, char *argv[]) {
 
     //Validar si los argumentos son nulos, para que no se caiga
 
+
+
     //cout << argc << endl;
     if(argc < 2){
         return 0;
@@ -26,13 +28,17 @@ int main(int argc, char *argv[]) {
         Repository* repo = new Repository(argv[2]);
         repoList = repo->initCommand(repoList);
         //string  s = "prueba";
+
+        cout << argv[1] << endl;
+
         json j;
 
-        //string s(argv[2]);
-        j["name"] =  "hola";
-        //
-        RestClient::Response r = RestClient::post("http://localhost:8080/Repository?repository={\"name\": \"bla\"}", "application/json", "");
-        // Que mande el init al server, crea el repo
+        string s(argv[2]);
+
+        j["name"] = s;
+
+        RestClient::Response r = RestClient::post("http://localhost:8080/Repository", "application/json", j.dump());
+
     }
     cout << argv[2] << argv[3]  << endl;
     if (command == "add" && argv[2] != NULL && argv[3] != NULL){
